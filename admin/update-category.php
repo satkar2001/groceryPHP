@@ -128,22 +128,19 @@
                 $featured = $_POST['featured'];
                 $active = $_POST['active'];
 
-                //2. Updating New Image if selected
-                //Check whether the image is selected or not
+                //Check whether the image is set or not
                 if(isset($_FILES['image']['name']))
                 {
-                    //Get the Image Details
+                    //Get the Image Detail
+
                     $image_name = $_FILES['image']['name'];
+                    //the filename array contains the name,size,tmp_name and type
+
 
                     //Check whether the image is available or not
                     if($image_name != "")
                     {
-                        //Image Available
 
-                        //A. UPload the New Image
-
-                        //Auto Rename our Image
-                        //Get the Extension of our image (jpg, png, gif, etc) e.g. "specialfood1.jpg"
                         $ext = end(explode('.', $image_name));
 
                         //Rename the Image
@@ -154,22 +151,22 @@
 
                         $destination_path = "../images/category/".$image_name;
 
-                        //Finally Upload the Image
+
                         $upload = move_uploaded_file($source_path, $destination_path);
 
-                        //Check whether the image is uploaded or not
-                        //And if the image is not uploaded then we will stop the process and redirect with error message
+
+                        // if the image is not uploaded then we will stop the process and redirect with error message
                         if($upload==false)
                         {
                             //SEt message
                             $_SESSION['upload'] = "<div class='error'>Failed to Upload Image. </div>";
-                            //Redirect to Add CAtegory Page
+
                             header('location:'.SITEURL.'admin/manage-category.php');
-                            //STop the Process
+                            //atop the Process
                             die();
                         }
 
-                        //B. Remove the Current Image if available
+                        // Remove the Current Image if available
                         if($current_image!="")
                         {
                             $remove_path = "../images/category/".$current_image;

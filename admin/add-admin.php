@@ -50,7 +50,7 @@
 <?php include('partials/footer.php');?>
 <?php
 if(isset($_POST['submit'])){
-    $full_name=$_POST['name'];
+    $full_name=;$_POST['name']
      $username=$_POST['username'];
     $password=md5($_POST['password']);
 
@@ -69,7 +69,7 @@ if(isset($_POST['submit'])){
     //to check if query is properly executed or not
 
     if($res==TRUE){
-        // echo "data inserted";
+
         $_SESSION['add']="<div class='success'>Admin added successfully</div>";
           //redirect to manage admin page
         header('location:'.SITEURL.'admin/manage-admin.php');
