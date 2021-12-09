@@ -1,9 +1,14 @@
+<<<<<<< HEAD:bakerycategory.php
+<?php include("front-end-partials/menu.php")?>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>complete responsive grocery website design tutorial</title>
+
+    <title>grocery store </title>
+     main
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -43,47 +48,48 @@
         </div>
        <br>
     </header>
+>>>>>>> 33b0179299ff7e1b053578eb20a5bb7ffeb09f96:bakerycategory.html
     <div class="container">
-        <h1 class="heading"><span>grains and pulses </span></h1>
+        <h1 class="heading"><span>Bakery Items </span></h1>
          <div class="grid">
              <article>
-                 <img src="./images/moong.png" alt="" >
+                 <img src="./images/whitebread.png" alt="">
                  <div class="text">
-                     <h3>Daal</h3>
-                     <p>150</p>
-                     <button>Add to Cart</button>
+                     <h3>white bread</h3>
+                     <p>Rs.20</p>
+                     <button>add to cart</button>
                  </div>
              </article>
-            <article>
-                 <img src="./images/rice.png" alt="" >
+             <article>
+                 <img src="./images/brownbread.png" alt="">
                  <div class="text">
-                     <h3>Rice</h3>
-                     <p>100</p>
-                     <button>Add to Cart</button>
+                     <h3>brown bread</h3>
+                     <p>Rs.30 </p>
+                     <button>add to cart</button>
                  </div>
              </article>
-    <article>
-                 <img src="./images/rajma.png" alt="" >
+             <article>
+                 <img src="./images/driedtoast.png" alt="">
                  <div class="text">
-                     <h3>Rajma</h3>
-                     <p>200</p>
-                     <button>Add to Cart</button>
+                     <h3>brittania rusk toast</h3>
+                     <p>Rs.80</p>
+                     <button>add to cart</button>
                  </div>
              </article>
-    <article>
-                 <img src="./images/pea.png" alt="" >
+             <article>
+                 <img src="./images/chocomuffin.png" alt="">
                  <div class="text">
-                     <h3>Green Peas</h3>
-                     <p>180</p>
-                     <button>Add to Cart</button>
+                     <h3>chocolate muffin </h3>
+                     <p>Rs10 per pc</p>
+                     <button>add to cart</button>
                  </div>
              </article>
-    <article>
-                 <img src="./images/black.png" alt="" >
+             <article>
+                 <img src="./images/croissant.png" alt="">
                  <div class="text">
-                     <h3>Black Turtle Beans</h3>
-                     <p>200</p>
-                     <button>Add to Cart</button>
+                     <h3>croissant</h3>
+                     <p>Rs.25 per pc</p>
+                     <button>add to cart</button>
                  </div>
              </article>
 
@@ -97,7 +103,7 @@
         <div class="footer-content">
             <h2><img src="./images/logo.png" class="footimg" alt=""></h2>
             <p>get all your grocery supplies at your doorstep</p>
-            <h3>connect with us</h3>
+            <h3>connect with usu</h3>
             <ul class="socials">
                 <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i> </a></li>
