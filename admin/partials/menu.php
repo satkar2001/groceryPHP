@@ -18,7 +18,7 @@ include('logincheck.php');
            <li> <a href="index.php">Home</a></li>
             <li><a href="manage-admin.php">Admin</a></li>
             <li><a href="manage-category.php">Category</a></li>
-           <li><a href="manage-item.php">Food</a></li>
+           <li><a href="manage-item.php">Items</a></li>
            <li> <a href="manage-order.php">Order</a></li>
            <li> <a href="logout.php">Logout</a></li>
 </ul>

@@ -1,3 +1,6 @@
+<<<<<<< HEAD:index.php
+<?php include("front-end-partials/menu.php")?>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +50,7 @@
     </div>
 
 </header>
+>>>>>>> 33b0179299ff7e1b053578eb20a5bb7ffeb09f96:index.html
 
 <!-- header section ends -->
 
@@ -96,7 +100,21 @@
 <section class="section collection">
  <div class="title">
     <h1 class="heading"><span>Featured categories</span></h1>
+<!-- CAtegories Section Starts Here -->
+<section class="categories">
+        <div class="container">
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+
+
+
  </div>
+ 
+                                
+
+                               
   <div class="collection-layout container">
       <div class="collection-item">
           <img src="images/fruitscategory.png" alt="">
@@ -119,16 +137,63 @@
               <a href="bakerycategory.html">shop now</a>
           </div>
       </div>
-      <div class="collection-item">
-          <img src="images/spicecategory.jpg" alt="">
-          <div class="collection-content">
-              <h3>salts and spices</h3>
-              <a href="saltspicecategory.html">shop now</a>
-          </div>
-      </div>
+   
+      <?php 
+                //Create SQL Query to Display CAtegories from Database
+                $sql = "SELECT * FROM tbl_category WHERE active='Yes' AND featured='Yes' LIMIT 3";
+                //Execute the Query
+                $res = mysqli_query($conn, $sql);
+                //Count rows to check whether the category is available or not
+                $count = mysqli_num_rows($res);
 
+                if($count>0)
+                {
+                    //CAtegories Available
+                    while($row=mysqli_fetch_assoc($res))
+                    {
+                        //Get the Values like id, title, image_name
+                        $id = $row['id'];
+                        $title = $row['title'];
+                        $image_name = $row['image_name'];
+                        ?>
+                        
+                        <div class="collection-layout container">
+                          <div class="collection-item">
+                                <?php 
+                                    //Check whether Image is available or not
+                                    if($image_name=="")
+                                    {
+                                        //Display MEssage
+                                        echo "<div class='error'>Image not Available</div>";
+                                    }
+                                    else
+                                    {
+                                        //Image Available
+                                        ?>
+                                        <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="">
+                                        <?php
+                                    }
+                                ?>
+                                <div class="collection-content">
+                            
+                                <h3><?php echo $title; ?></h3>
+                                 <a href="<?php echo SITEURL; ?>categories.php?category_id=<?php echo $id; ?>">shop now</a>
+                                 </div>
+                                 </div>
+                        </a>
+
+                        <?php
+                    }
+                }
+                else
+                {
+                    //Categories not Available
+                    echo "<div class='error'>Category not Added.</div>";
+                }
+            ?>
   </div>
 </section>
+
 
 <!-- categories end -->
 

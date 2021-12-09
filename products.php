@@ -1,3 +1,6 @@
+<<<<<<< HEAD:products.php
+<?php include("front-end-partials/menu.php")?>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +46,7 @@
         </div>
        <br>
     </header>
+>>>>>>> 33b0179299ff7e1b053578eb20a5bb7ffeb09f96:products.html
     <div class="container">
         <h1 class="heading"><span>All Products </span></h1>
          <div class="grid">
